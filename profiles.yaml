@@ -1,0 +1,17 @@
+modelling:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      method: iam
+      cluster_id: tech-redshift-cluster
+      host: tech-redshift-cluster.c57zfbyn9hj4.us-east-1.redshift.amazonaws.com
+      user: sotiris
+      iam_profile: default # optional
+      iam_duration_seconds: 900 # optional
+      autocreate: true # optional
+
+      # Other Redshift configs:
+      port: 5439
+      dbname: dev
+      schema: public
